@@ -12,7 +12,7 @@ import com.tm.srping.basics.springin5steps.SpringIn5StepsBasicApplication;
 
 @RunWith(SpringRunner.class)
 @ContextConfiguration(classes = SpringIn5StepsBasicApplication.class)
-public class SomeCdibusinessTest {
+public class BinarySearchTest {
 
 	@Autowired
 	BinarySearchImpl binarySearch;
