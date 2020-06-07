@@ -14,7 +14,7 @@ public class MethodExecutionCalculationAspect {
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
 
 	// To find method execution time
-	@Around(value = "execution(* com.tm.spring.aop.springaop.business.*.*(..))")
+	@Around("com.tm.spring.aop.springaop.aspect.CommonJoinPointConfig.TracktimeAnnotation()")
 	public void around(ProceedingJoinPoint joinPoint) throws Throwable {
 		long startTime = System.currentTimeMillis();
 		joinPoint.proceed();
