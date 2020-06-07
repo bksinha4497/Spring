@@ -17,7 +17,9 @@ public class UserAccessAspect {
 	// What kind of method call will i intercept
 	// execution(* PACKAGE.*.*(..)) -- > PointCut
 	// Weaving & Weaver
-	@Before("execution(* com.tm.spring.aop.springaop.business.*.*(..))")
+
+	// @Before("execution(* com.tm.spring.aop.springaop.business.*.*(..))")
+	@Before("com.tm.spring.aop.springaop.aspect.CommonJoinPointConfig.DataLayer()")
 	public void before(JoinPoint joinPoint) { // JoinPoint -> specific execution interception
 		// ADVICE
 		logger.info("Check for user access before method call");
